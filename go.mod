@@ -1,4 +1,4 @@
-module github.com/Gskartwii/roblox-dissector
+module github.com/iocmet/roblox-dissector-build-fixed
 
 go 1.13
 
