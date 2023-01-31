@@ -423,7 +423,7 @@ func viewerForDataPacket(packet peer.Packet83Subpacket) (gtk.IWidget, error) {
 		scrolled.ShowAll()
 		return scrolled, nil
 	case 0x12:
-		hashes := packet.(*peer.Packet83_12)
+		hashes := (*peer.Packet83_12)(packet.(*peer.Packet83_12))
 		model, err := gtk.ListStoreNew(
 			glib.TYPE_STRING, // index
 			glib.TYPE_STRING, // hash
